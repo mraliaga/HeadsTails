@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100%;
+  background: linear-gradient(to right, #ffff00 50%, #0000ff 50%) fixed;
+}
+
+.container {
+  background-color: #fff;
+  width: 400px;
+  padding: 50px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  box-shadow: 15px 30px 35px rgab(0, 0, 0, 0.1);
+  border-radius: 10px;
+  perspective: 300px;
+}
+.container .stats {
+  text-align: right;
+  color: #010101;
+  font-weight: 600;
+  line-height: 25px;
+}
+.container .coin {
+  height: 150px;
+  width: 150px;
+  position: relative;
+  margin: 50px auto;
+  transform-style: preserve-3d;
+}
+.container .coin .heads {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.container .coin .heads img {
+  width: 145px;
+}
+.container .coin .tails {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+}
+.container .coin .tails img {
+  width: 145px;
+}
+.container .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.container .buttons button {
+  width: 120px;
+  padding: 10px 0;
+  border: 2px sold #423ae0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container .buttons #flip {
+  background-color: #ffff00;
+  color: #0000ff;
+}
+.container .buttons #flip:disabled {
+  border-color: red;
+  color: red;
+}
+.container .buttons #reset {
+  background-color: #0000ff;
+  color: #ffff00;
+}
+
+@keyframes spin-tails {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(1980deg);
+  }
+}
+@keyframes spin-heads {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(2160deg);
+  }
+}/*# sourceMappingURL=main.css.map */
